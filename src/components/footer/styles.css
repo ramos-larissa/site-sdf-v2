@@ -1,5 +1,31 @@
 footer {
     position: fixed;
-    bottom:0;
+    bottom: 0;
     width: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.conteudo-left {
+    width: 20%;
+    float: left;
+}
+
+.conteudo-right {
+    width: 20%;
+    float: left;
+}
+
+.img-logo-footer{
+    height: 60px;
+    margin: 10px;
+}
+
+.icon{
+    margin-right: 3px;
 }

@@ -2,15 +2,20 @@ import React from "react";
 import "../footer/styles.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import InstagramIcon from '@material-ui/icons/Instagram';
+
+import LogoDF from  "../../assets/danceFlow.webp";
+import LogoDown from  "../../assets/LogoDowntown.webp";
+
 
 const useStyles = makeStyles({
     root: {
-        minWidth: '100%',
-        backgroundColor: '#212121',
+        minWidth: "100%",
+        backgroundColor: "#212121",
+        color: "white",
     },
     bullet: {
         display: "inline-block",
@@ -27,32 +32,48 @@ const useStyles = makeStyles({
 
 export default function Footer() {
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
 
     return (
-      <footer>
-        <Card className={classes.root}>
-            <CardContent>
-                <Typography
-                    className={classes.title}
-                    color="textSecondary"
-                    gutterBottom
-                >
-                    Word of the Day
-                </Typography>
-                <Typography variant="h5" component="h2">
-                    be{bull}nev{bull}o{bull}lent
-                </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    adjective
-                </Typography>
-                <Typography variant="body2" component="p">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
-        </Card>
+      
+        <footer>
+            <Card className={classes.root}>
+                <CardContent className="container">
+                <Typography variant="body2" component="p" className="content-left">
+                    <img src={LogoDF}  className='img-logo-footer'/>
+                    </Typography>
+                    <Typography variant="body2" component="p" className="content-left">
+                        <ul>
+                            <li>
+                                Rua Teste primeiro N:111 - Bairro Teste - SP
+                            </li>
+                            <li> Telefone: (11) 1 1111-1111 </li>
+                            <p>
+                              <InstagramIcon className="icon"/>
+                              <InstagramIcon className="icon"/>
+                              <InstagramIcon className="icon"/>
+                            </p>
+                        </ul>
+                    </Typography>
+
+                    <Typography variant="body2" component="p" className="content-right">
+                    <img src={LogoDown} className='img-logo-footer' />
+                    </Typography>
+
+                    <Typography variant="body2" component="p" className="content-right">
+                        <ul>
+                            <li>
+                                Rua Teste primeiro N:111 - Bairro Teste - SP
+                            </li>
+                            <li> Telefone: (11) 1 1111-1111 </li>
+                            <p>
+                              <InstagramIcon className="icon"/>
+                              <InstagramIcon className="icon"/>
+                              <InstagramIcon className="icon"/>
+                            </p>
+                        </ul>
+                    </Typography>
+                </CardContent>
+            </Card>
         </footer>
     );
 }

@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
-    btnHeader:{
-        '& > *': {
+    btnHeader: {
+        "& > *": {
             margin: theme.spacing(1),
-          },
+        },
     },
 }));
 
@@ -41,12 +41,18 @@ export default function Header() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" className={classes.title}>
-                        News
+                        Home
                     </Typography>
                     <div className={classes.btnHeader}>
-                        <Button variant="contained" className="btn-header">Juliana Muniz</Button>
-                        <Button variant="contained" className="btn-header">DownTown</Button>
-                        <Button variant="contained" className="btn-header">Cursos</Button>
+                        <Button variant="contained" className="btn-header">
+                            Sex Dance Flow
+                        </Button>
+                        <Button variant="contained" className="btn-header">
+                            DownTown
+                        </Button>
+                        <Button variant="contained" className="btn-header">
+                            Cursos
+                        </Button>
                     </div>
                 </Toolbar>
             </AppBar>
