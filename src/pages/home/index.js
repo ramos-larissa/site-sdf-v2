@@ -2,6 +2,7 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
@@ -10,17 +11,16 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Banner1 from "../../assets/aurora.jpg";
 import Banner2 from "../../assets/img1.jpg";
 import Banner3 from "../../assets/img2.jpg";
-import LogoDF from  "../../assets/danceFlow.webp";
-import LogoDown from  "../../assets/LogoDowntown.webp";
+import LogoDF from "../../assets/danceFlow.webp";
+import LogoDown from "../../assets/LogoDowntown.webp";
 
+import "../home/styles.css";
 
-import '../home/styles.css'
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: "100%",
         backgroundColor: "white",
-        color: "white",
+        color: "black",
     },
     bullet: {
         display: "inline-block",
@@ -33,7 +33,16 @@ const useStyles = makeStyles({
     pos: {
         marginBottom: 12,
     },
-});
+    cardPaper: {
+        display: "flex",
+        flexWrap: "wrap",
+        "& > *": {
+            margin: theme.spacing(1),
+            width: theme.spacing(16),
+            height: theme.spacing(16),
+        },
+    },
+}));
 
 export default function Home() {
     const classes = useStyles();
@@ -42,9 +51,9 @@ export default function Home() {
     return (
         <>
             <Header />
-            <div className='card-log'>
-                <img src={LogoDF}  className='img-logo'/>
-                <img src={LogoDown} className='img-logo' />
+            <div className="card-log">
+                <img src={LogoDF} className="img-logo" />
+                <img src={LogoDown} className="img-logo" />
             </div>
             <div>
                 <Carousel infiniteLoop={true} autoPlay={true}>
@@ -59,36 +68,25 @@ export default function Home() {
                     </div>
                 </Carousel>
             </div>
-        
-            <div className='card-courses'>
-                <Card className={classes.root}>
-                    <CardContent>
-                        <Typography
-                            className={classes.title}
-                            color="textPrimary"
-                            gutterBottom
-                        >
-                            Word of the Day
-                        </Typography>
-                        <Typography variant="h5" component="h2">
-                            be{bull}nev{bull}o{bull}lent
-                        </Typography>
-                        <Typography
-                            className={classes.pos}
-                            color="textSecondary"
-                        >
-                            adjective
-                        </Typography>
-                        <Typography variant="body2" component="p">
-                            well meaning and kindly.
-                            <br />
-                            {'"a benevolent smile"'}
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </div>
-            
 
+            <div className="card-courses">
+            <h1>Cursos Online</h1>
+     <div className={classes.cardPaper}>
+    
+      <Paper elevation={3}>
+      <h1>Cursos Online</h1>
+      </Paper>
+      <Paper elevation={3}>
+      <h1>Cursos Online</h1>
+      </Paper>
+      <Paper elevation={3}>
+      <h1>Cursos Online</h1>
+      </Paper>
+      <Paper elevation={3}>
+      <h1>Cursos Online</h1>
+      </Paper>
+    </div>
+            </div>
             <Footer />
         </>
     );
